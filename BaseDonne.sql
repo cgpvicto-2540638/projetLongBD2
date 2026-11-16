@@ -32,7 +32,8 @@ CREATE TABLE clients(
 
 CREATE TABLE commandes(
 	id INTEGER PRIMARY KEY AUTO_INCREMENT,
-	date DATETIME,
+	heure INTEGER,
+	minute INTEGER,
 	adresse VARCHAR(255),
 	etat_id INTEGER,
 	client_id INTEGER,
@@ -90,5 +91,4 @@ BEGIN
 	SET NEW.etat_id = 1;
 END %%
 DELIMITER ;
-
-
+SELECT * FROM pizzeria.commandes ;

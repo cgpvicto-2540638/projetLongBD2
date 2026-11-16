@@ -1,0 +1,256 @@
+/* style.css - Thème chaleureux pour une pizzeria */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #38251f;
+    background:
+        radial-gradient(circle at top left, rgba(255, 210, 130, 0.35), transparent 35%),
+        #fff4e5;
+}
+
+h1 {
+    margin: 0 auto 28px;
+    text-align: center;
+    color: #b83227;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+form {
+    width: min(100%, 620px);
+    margin: 0 auto;
+    padding: 32px;
+    background: #fffdf9;
+    border: 1px solid #f0d7bd;
+    border-top: 6px solid #c83d2d;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(92, 48, 25, 0.12);
+}
+
+form > div {
+    margin-bottom: 28px;
+}
+
+form > div:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    color: #6e3025;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    border-bottom: 1px solid #f0dfcf;
+}
+
+form > div > div {
+    margin-bottom: 18px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #50352c;
+    font-weight: 700;
+}
+
+input {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 13px;
+    color: #38251f;
+    background: #fff;
+    border: 1px solid #d9c3b2;
+    border-radius: 8px;
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #c83d2d;
+    box-shadow: 0 0 0 3px rgba(200, 61, 45, 0.15);
+}
+
+button {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 8px;
+    padding: 12px 20px;
+    color: #fff;
+    background: #c83d2d;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: #a92e22;
+    box-shadow: 0 5px 14px rgba(169, 46, 34, 0.2);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 3px solid #e6a23c;
+    outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 25px 14px;
+    }
+
+    form {
+        padding: 24px 18px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 45px 18px;
+    font-family: Arial, sans-serif;
+    color: #38251f;
+    background: #fff4e5;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #b83227;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 2.6rem;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    padding: 32px;
+    background: #fffdf9;
+    border: 1px solid #efd9c5;
+    border-top: 6px solid #c83d2d;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(92, 48, 25, 0.12);
+}
+
+form > div {
+    margin-bottom: 26px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #50352c;
+    font-weight: bold;
+}
+
+h2 {
+    color: #6e3025;
+    font-family: Georgia, serif;
+    border-bottom: 1px solid #f0dfcf;
+    padding-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px;
+    color: #38251f;
+    background: white;
+    border: 1px solid #d9c3b2;
+    border-radius: 9px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #c83d2d;
+    box-shadow: 0 0 0 3px rgba(200, 61, 45, 0.15);
+}
+
+input[type="radio"] {
+    accent-color: #c83d2d;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+input[type="radio"] + label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    min-height: 49px;
+    padding: 12px;
+    color: white;
+    background: #c83d2d;
+    border: none;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #a92e22;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(169, 46, 34, 0.2);
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 25px 14px;
+    }
+
+    form {
+        padding: 24px 18px;
+    }
+}
+input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px 0 0;
+    width: 13px;
+    height: 13px;
+    margin: 0 6px 10px 0;
+    accent-color: #c83d2d;
+    cursor: pointer;
+    vertical-align: middle;
+}
+label.radio {
+    display: inline-block;
+    margin: 0 0 0 0;
+    vertical-align: middle;
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+.divRadio{
+    margin: 0;
+}
