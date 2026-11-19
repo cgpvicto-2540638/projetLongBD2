@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>liste de commande en attente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Resume de la commande</h1>
+    <div id="resume">
+        <h2>donnée du client</h2>
+        <ul>
+            <li>nom:{{ donneClient['nomClient']}}</li>
+            <li>heure:{{donneClient['heure']}}:{{donneClient['minute']}}</li>
+            <li>adresse:{{donneClient['adresse']}}</li>
+            <li>numéro de téléphone:{{donneClient['nb_telephone']}}</li>
+        </ul>
+        <h2>choix de la Pizza</h2>
+        <ul>
+            <li>Croute:{{donneClient['nomCroute']}}</li>
+            <li>Sauce:{{donneClient['nomSauce']}}</li>
+            <li>
+                garnitures:
+                <ol>
+                    {% for row in donneGarniture %}
+                    <li>{{row['garniture']}}</li>
+                    {% endfor %}
+                </ol>
+            </li>
+        </ul>
+        <a href="{{ url_for('listeCommande') }}">confirmer</a>
+    </div>
+</body>
+</html>

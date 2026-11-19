@@ -48,7 +48,7 @@ CREATE TABLE pizza(
 	commande_id INTEGER,
 	FOREIGN KEY (croute_id) REFERENCES croutes(id),
 	FOREIGN KEY (sauce_id) REFERENCES sauces(id),
-	FOREIGN KEY (commande_id) REFERENCES croutes(id)
+	FOREIGN KEY (commande_id) REFERENCES commandes(id)
 );
 CREATE TABLE garnituesPizza(
 	pizza_id INTEGER,
@@ -91,4 +91,15 @@ BEGIN
 	SET NEW.etat_id = 1;
 END %%
 DELIMITER ;
-SELECT * FROM pizzeria.commandes ;
+SELECT * FROM pizzeria.commandes;
+SELECT heure, minute, adresse, c2.nom AS nomClient, nb_telephone, c3.nom AS nomCroute, s.nom AS nomSauce FROM pizzeria.commandes c 
+	JOIN pizzeria.clients c2 ON c.client_id = c2.id
+	JOIN pizzeria.pizza p ON c.id = p.commande_id 
+	JOIN pizzeria.croutes c3 ON c3.id = p.croute_id 
+	JOIN pizzeria.sauces s ON p.sauce_id = s.id;
+SELECT * FROM pizzeria.commandes c 
+	JOIN pizzeria.pizza p ON c.id = p.commande_id
+	JOIN pizzeria.garnituespizza g ON p.id = g.pizza_id
+	JOIN pizzeria.garnitures g2 ON g.gariture_id = g2.id;
+
+SELECT * FROM pizzeria.garnituespizza g;

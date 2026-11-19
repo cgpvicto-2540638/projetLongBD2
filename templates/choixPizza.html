@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page de données</title>
+    <title>Enter chois Pizza</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
     <h1>Choisiser votre Pizza</h1>
     <form action="/ajoutPizza" method="post">
         <div>
             <label for="croutes">Choisiser votre croutes: </label><br>
-            <select name="croutes" id="croutes">
+            <select name="croutes" id="croutes" required>
                 <option value="">enter une croutes</option>
-                {% for row in data['croutes']%}
-                    <option value="{{ row }}">{{ row }}</option>
+                {% for row in croutes%}
+                    <option value="{{ row[1] }}">{{ row[0] }}</option>
                 {% endfor %}
             </select>
         </div>
         <div>
             <label for="sauces">Choisiser votre sauces: </label><br>
-            <select name="sauces" id="sauces">
+            <select name="sauces" id="sauces" required>
                 <option value="">enter une sauces</option>
-                {% for row in data['sauces'] %}
-                    <option value="{{ row }}">{{ row }}</option>
+                {% for row in sauces %}
+                    <option value="{{ row[1] }}">{{ row[0] }}</option>
                 {% endfor %}
             </select>
         </div>
         <div>
             <h2 for="garnitures">Choisiser votre garnitures: </label><br>
-            {% for row in data['garnitures'] %}
+            {% for row in garnitures %}
             <div class="divRadio">
-                <input type="radio" id="{{ row }}" name="{{row }}"></input>
-                <label class="radio" for="{{ row }}">{{ row }}</label>
+                <input type="checkbox" id="{{ row[1] }}" name="garnitures" value="{{ row[1] }}">
+                <label class="radio" for="{{ row[1] }}">{{ row[0]}}</label>
             </div>
 
             {% endfor %}

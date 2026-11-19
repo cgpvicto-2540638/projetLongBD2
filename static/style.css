@@ -232,7 +232,7 @@ button:hover {
         padding: 24px 18px;
     }
 }
-input[type="radio"] {
+input[type="checkbox"] {
     display: inline-block;
     vertical-align: middle;
     margin: 0 6px 0 0;
@@ -253,4 +253,162 @@ label.radio {
 }
 .divRadio{
     margin: 0;
+}
+
+/* Page résumé de commande */
+
+#resume {
+    width: min(100%, 650px);
+    margin: 0 auto;
+    padding: 30px;
+    background: #fffdf9;
+    border: 1px solid #efd9c5;
+    border-top: 6px solid #c83d2d;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(92, 48, 25, 0.12);
+}
+
+#resume h2 {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    color: #b83227;
+    font-family: Georgia, serif;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #f0dfcf;
+}
+
+#resume h2:first-child {
+    margin-top: 0;
+}
+
+#resume ul {
+    padding-left: 22px;
+    list-style-type: none;
+}
+
+#resume ul > li {
+    margin-bottom: 13px;
+    padding: 10px 12px;
+    color: #50352c;
+    background: #fff4e5;
+    border-radius: 7px;
+}
+
+/* Liste des garnitures */
+#resume ol {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+#resume ol li {
+    margin-bottom: 7px;
+    padding: 5px;
+    color: #6e3025;
+    background: transparent;
+    border-radius: 0;
+}
+
+@media (max-width: 520px) {
+    #resume {
+        padding: 22px 17px;
+    }
+}
+a {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    background: #c83d2d;
+    border: none;
+    border-radius: 9px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+a:hover {
+    background: #a92e22;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(169, 46, 34, 0.2);
+}
+
+/* Liste des commandes */
+
+.Commandes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 350px));
+    justify-content: center;
+    gap: 22px;
+    width: 100%;
+    padding: 15px;
+}
+
+/* Carte individuelle */
+
+.Commande {
+    padding: 20px;
+    background: #fffdf9;
+    border: 1px solid #efd9c5;
+    border-left: 5px solid #c83d2d;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(92, 48, 25, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.Commande:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 22px rgba(92, 48, 25, 0.16);
+}
+
+/* Titres */
+
+.Commande h2 {
+    margin: 8px 0 12px;
+    padding-bottom: 7px;
+    color: #b83227;
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+}
+
+/* Informations */
+
+.Commande ul {
+    padding: 0;
+    margin: 0 0 18px;
+    list-style: none;
+}
+
+.Commande ul > li {
+    margin-bottom: 8px;
+    padding: 7px 9px;
+    color: #50352c;
+    background: #fff4e5;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* Garnitures */
+
+.Commande ol {
+    margin-top: 7px;
+    padding-left: 25px;
+}
+
+.Commande ol li {
+    margin-bottom: 5px;
+    color: #6e3025;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 520px) {
+    .Commandes {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .Commande {
+        width: 100%;
+    }
 }

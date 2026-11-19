@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>liste de commande en attente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Liste de Commande en attente</h1>
+    <div class="Commandes">
+
+   {% for row in donneClient %}
+    <div class="Commande">
+        <h2>donnée du client</h2>
+        <ul>
+            <li>nom:{{ row['nomClient']}}</li>
+            <li>heure:{{row['heure']}}:{{row['minute']}}</li>
+            <li>adresse:{{row['adresse']}}</li>
+            <li>numéro de téléphone:{{row['nb_telephone']}}</li>
+        </ul>
+        <h2>choix de la Pizza</h2>
+        <ul>
+            <li>Croute:{{row['nomCroute']}}</li>
+            <li>Sauce:{{row['nomSauce']}}</li>
+            <li>garnitures:
+                <ol>
+                    {% for garniture in donneGarniture %}
+                        {% if row['id'] == garniture['id'] %}
+                            <li>{{garniture['garniture']}}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </li>
+        </ul>
+        </div>
+    {% endfor %}
+    </div>
+</body>
+</html>
