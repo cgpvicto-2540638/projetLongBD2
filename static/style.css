@@ -412,3 +412,66 @@ a:hover {
         width: 100%;
     }
 }
+
+/* Header et menu de navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 30px;
+
+    background: #b83227;
+    box-shadow: 0 4px 12px rgba(92, 48, 25, 0.15);
+}
+
+/* Liens du menu */
+
+nav a {
+    display: inline-block;
+    padding: 11px 18px;
+
+    color: white;
+    background: transparent;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    transition: background 0.2s, transform 0.2s;
+}
+
+/* Survol */
+
+nav a:hover {
+    background: #8f281f;
+    transform: translateY(-2px);
+}
+
+/* Page active (optionnel) */
+
+nav a.active {
+    background: #8f281f;
+    box-shadow: inset 0 -3px 0 #e6a23c;
+}
+
+/* Version mobile */
+
+@media (max-width: 520px) {
+    nav {
+        flex-direction: column;
+        gap: 5px;
+        padding: 12px;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}

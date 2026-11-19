@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Enter une commande</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+{% include 'header.html' %}
     <h1>Enter une commande</h1>
     <form action="/ajoutCommande" method="post">
         <div>

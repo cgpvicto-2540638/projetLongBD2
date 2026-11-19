@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Enter chois Pizza</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
-</head>
-<body>
+{% include 'header.html' %}
     <h1>Choisiser votre Pizza</h1>
     <form action="/ajoutPizza" method="post">
         <div>
