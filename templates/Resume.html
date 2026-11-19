@@ -1,19 +1,19 @@
 {% include 'header.html' %}
     <h1>Resume de la commande</h1>
     <div id="resume">
-        <h2>donnée du client</h2>
+        <h2>Donnée du client</h2>
         <ul>
-            <li>nom:{{ donneClient['nomClient']}}</li>
-            <li>heure:{{donneClient['heure']}}:{{donneClient['minute']}}</li>
-            <li>adresse:{{donneClient['adresse']}}</li>
-            <li>numéro de téléphone:{{donneClient['nb_telephone']}}</li>
+            <li>Nom:{{ donneClient['nomClient']}}</li>
+            <li>Heure:{{donneClient['heure']}}:{{donneClient['minute']}}</li>
+            <li>Adresse:{{donneClient['adresse']}}</li>
+            <li>Numéro de téléphone:{{donneClient['nb_telephone']}}</li>
         </ul>
-        <h2>choix de la Pizza</h2>
+        <h2>Choix de la pizza</h2>
         <ul>
             <li>Croute:{{donneClient['nomCroute']}}</li>
             <li>Sauce:{{donneClient['nomSauce']}}</li>
             <li>
-                garnitures:
+                Garnitures:
                 <ol>
                     {% for row in donneGarniture %}
                     <li>{{row['garniture']}}</li>
@@ -21,7 +21,7 @@
                 </ol>
             </li>
         </ul>
-        <a href="{{ url_for('listeCommande') }}">confirmer</a>
+        <a href="{{ url_for('listeCommande') }}">Confirmer</a>
     </div>
 </body>
 </html>

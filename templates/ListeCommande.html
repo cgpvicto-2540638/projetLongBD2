@@ -1,21 +1,21 @@
 {% include 'header.html' %}
-    <h1>Liste de Commande en attente</h1>
+    <h1>Liste de commande en attente</h1>
     <div class="Commandes">
     {% if donneClient|length > 0 %}
         {% for row in donneClient %}
             <div class="Commande">
-                <h2>donnée du client</h2>
+                <h2>Donnée du client</h2>
                 <ul>
                     <li>nom:{{ row['nomClient']}}</li>
                     <li>heure:{{row['heure']}}:{{row['minute']}}</li>
                     <li>adresse:{{row['adresse']}}</li>
                     <li>numéro de téléphone:{{row['nb_telephone']}}</li>
                 </ul>
-                <h2>choix de la Pizza</h2>
+                <h2>choix de la pizza</h2>
                 <ul>
                     <li>Croute:{{row['nomCroute']}}</li>
                     <li>Sauce:{{row['nomSauce']}}</li>
-                    <li>garnitures:
+                    <li>Garnitures:
                         <ol>
                             {% for garniture in donneGarniture %}
                                 {% if row['pizza_id'] == garniture['id'] %}
@@ -25,7 +25,7 @@
                         </ol>
                     </li>
                 </ul>
-                <a href="{{ url_for('LivrerCommande', id=row['commande_id']) }}">commande livrée</a>
+                <a href="{{ url_for('LivrerCommande', id=row['commande_id']) }}">Commande livrée</a>
             </div>
         {% endfor %}
     {% else %}
